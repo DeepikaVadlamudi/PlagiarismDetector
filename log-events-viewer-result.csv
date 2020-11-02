@@ -1,0 +1,110 @@
+timestamp,message
+1603809373144,"2020-10-27 14:36:11,527 sagemaker-containers INFO     Imported framework sagemaker_sklearn_container.training"
+1603809373144,"2020-10-27 14:36:11,529 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)"
+1603809373144,"2020-10-27 14:36:11,540 sagemaker_sklearn_container.training INFO     Invoking user training script."
+1603809373145,"2020-10-27 14:36:11,851 sagemaker-containers INFO     Module train does not provide a setup.py. "
+1603809373145,Generating setup.py
+1603809373145,"2020-10-27 14:36:11,851 sagemaker-containers INFO     Generating setup.cfg"
+1603809373145,"2020-10-27 14:36:11,852 sagemaker-containers INFO     Generating MANIFEST.in"
+1603809373145,"2020-10-27 14:36:11,852 sagemaker-containers INFO     Installing module with the following command:"
+1603809373145,/miniconda3/bin/python -m pip install . 
+1603809373145,Processing /opt/ml/code
+1603809373145,"Building wheels for collected packages: train
+  Building wheel for train (setup.py): started
+  Building wheel for train (setup.py): finished with status 'done'
+  Created wheel for train: filename=train-1.0.0-py2.py3-none-any.whl size=5809 sha256=ace8dc3dd3ba78ba9904c15f1ddd9bc29ad3e08715731314903df514976c0dba
+  Stored in directory: /tmp/pip-ephem-wheel-cache-x5v_4l5f/wheels/35/24/16/37574d11bf9bde50616c67372a334f94fa8356bc7164af8ca3"
+1603809373145,Successfully built train
+1603809373145,Installing collected packages: train
+1603809373145,Successfully installed train-1.0.0
+1603809374146,"2020-10-27 14:36:13,205 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)"
+1603809374146,"2020-10-27 14:36:13,217 sagemaker-containers INFO     Invoking user script
+"
+1603809374146,"Training Env:
+"
+1603809374146,"{
+    ""additional_framework_parameters"": {},
+    ""channel_input_dirs"": {
+        ""train"": ""/opt/ml/input/data/train""
+    },
+    ""current_host"": ""algo-1"",
+    ""framework_module"": ""sagemaker_sklearn_container.training:main"",
+    ""hosts"": [
+        ""algo-1""
+    ],
+    ""hyperparameters"": {},
+    ""input_config_dir"": ""/opt/ml/input/config"",
+    ""input_data_config"": {
+        ""train"": {
+            ""TrainingInputMode"": ""File"",
+            ""S3DistributionType"": ""FullyReplicated"",
+            ""RecordWrapperType"": ""None""
+        }
+    },
+    ""input_dir"": ""/opt/ml/input"",
+    ""is_master"": true,
+    ""job_name"": ""sagemaker-scikit-learn-2020-10-27-14-33-41-064"",
+    ""log_level"": 20,
+    ""master_hostname"": ""algo-1"",
+    ""model_dir"": ""/opt/ml/model"",
+    ""module_dir"": ""s3://sagemaker-us-east-2-256861692552/sagemaker-scikit-learn-2020-10-27-14-33-41-064/source/sourcedir.tar.gz"",
+    ""module_name"": ""train"",
+    ""network_interface_name"": ""eth0"",
+    ""num_cpus"": 4,
+    ""num_gpus"": 0,
+    ""output_data_dir"": ""/opt/ml/output/data"",
+    ""output_dir"": ""/opt/ml/output"",
+    ""output_intermediate_dir"": ""/opt/ml/output/intermediate"",
+    ""resource_config"": {
+        ""current_host"": ""algo-1"",
+        ""hosts"": [
+            ""algo-1""
+        ],
+        ""network_interface_name"": ""eth0""
+    },
+    ""user_entry_point"": ""train.py"""
+1603809374146,"}
+"
+1603809374146,"Environment variables:
+"
+1603809374146,"SM_HOSTS=[""algo-1""]"
+1603809374147,SM_NETWORK_INTERFACE_NAME=eth0
+1603809374147,SM_HPS={}
+1603809374147,SM_USER_ENTRY_POINT=train.py
+1603809374147,SM_FRAMEWORK_PARAMS={}
+1603809374147,"SM_RESOURCE_CONFIG={""current_host"":""algo-1"",""hosts"":[""algo-1""],""network_interface_name"":""eth0""}"
+1603809374147,"SM_INPUT_DATA_CONFIG={""train"":{""RecordWrapperType"":""None"",""S3DistributionType"":""FullyReplicated"",""TrainingInputMode"":""File""}}"
+1603809374147,SM_OUTPUT_DATA_DIR=/opt/ml/output/data
+1603809374147,"SM_CHANNELS=[""train""]"
+1603809374147,SM_CURRENT_HOST=algo-1
+1603809374147,SM_MODULE_NAME=train
+1603809374147,SM_LOG_LEVEL=20
+1603809374147,SM_FRAMEWORK_MODULE=sagemaker_sklearn_container.training:main
+1603809374147,SM_INPUT_DIR=/opt/ml/input
+1603809374147,SM_INPUT_CONFIG_DIR=/opt/ml/input/config
+1603809374147,SM_OUTPUT_DIR=/opt/ml/output
+1603809374147,SM_NUM_CPUS=4
+1603809374147,SM_NUM_GPUS=0
+1603809374147,SM_MODEL_DIR=/opt/ml/model
+1603809374147,SM_MODULE_DIR=s3://sagemaker-us-east-2-256861692552/sagemaker-scikit-learn-2020-10-27-14-33-41-064/source/sourcedir.tar.gz
+1603809374147,"SM_TRAINING_ENV={""additional_framework_parameters"":{},""channel_input_dirs"":{""train"":""/opt/ml/input/data/train""},""current_host"":""algo-1"",""framework_module"":""sagemaker_sklearn_container.training:main"",""hosts"":[""algo-1""],""hyperparameters"":{},""input_config_dir"":""/opt/ml/input/config"",""input_data_config"":{""train"":{""RecordWrapperType"":""None"",""S3DistributionType"":""FullyReplicated"",""TrainingInputMode"":""File""}},""input_dir"":""/opt/ml/input"",""is_master"":true,""job_name"":""sagemaker-scikit-learn-2020-10-27-14-33-41-064"",""log_level"":20,""master_hostname"":""algo-1"",""model_dir"":""/opt/ml/model"",""module_dir"":""s3://sagemaker-us-east-2-256861692552/sagemaker-scikit-learn-2020-10-27-14-33-41-064/source/sourcedir.tar.gz"",""module_name"":""train"",""network_interface_name"":""eth0"",""num_cpus"":4,""num_gpus"":0,""output_data_dir"":""/opt/ml/output/data"",""output_dir"":""/opt/ml/output"",""output_intermediate_dir"":""/opt/ml/output/intermediate"",""resource_config"":{""current_host"":""algo-1"",""hosts"":[""algo-1""],""network_interface_name"":""eth0""},""user_entry_point"":""train.py""}"
+1603809374147,SM_USER_ARGS=[]
+1603809374147,SM_OUTPUT_INTERMEDIATE_DIR=/opt/ml/output/intermediate
+1603809374147,SM_CHANNEL_TRAIN=/opt/ml/input/data/train
+1603809374147,"PYTHONPATH=/miniconda3/bin:/miniconda3/lib/python37.zip:/miniconda3/lib/python3.7:/miniconda3/lib/python3.7/lib-dynload:/miniconda3/lib/python3.7/site-packages
+"
+1603809374147,"Invoking script with the following command:
+"
+1603809374147,"/miniconda3/bin/python -m train
+
+"
+1603809374147,"Traceback (most recent call last):
+  File ""/miniconda3/lib/python3.7/runpy.py"", line 193, in _run_module_as_main
+    ""__main__"", mod_spec)
+  File ""/miniconda3/lib/python3.7/runpy.py"", line 85, in _run_code
+    exec(code, run_globals)
+  File ""/opt/ml/code/train.py"", line 7, in <module>
+    import joblib"
+1603809374147,ModuleNotFoundError: No module named 'joblib'
+1603809374147,"2020-10-27 14:36:13,852 sagemaker-containers ERROR    ExecuteUserScriptError:"
+1603809374147,"Command ""/miniconda3/bin/python -m train"""
